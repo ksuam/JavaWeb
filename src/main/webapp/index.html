@@ -1,10 +1,124 @@
 <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
 <html>
     <head>
-        <title>Formulario Servlet</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ejerccio formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="recursos/estilos.css" type="text/css"/>
+        <script type="text/javascript" src="recursos/funciones.js"></script>
     </head>
     <body>
-        <h1>Formulario Servlet</h1>
-    </body>
-</html>
+        <form action="/JavaWeb/ServletForm" name="form2" method="post" onsubmit="return validarForma(this)">
+
+            <input type="hidden" name="oculto" value="valorOculto"><input><!-- comment -->
+            <table width="200" id="enfasis-columna">
+                <caption>
+                    Formulario Registro de datos
+                    </caption>
+
+                        <tr>
+                            <td class="columna">
+                                Usuarios: (*)
+                            </td>
+                            <td>
+                                <input type="text" name="name" class="default" name="usuario"
+                                       value="Escribir usuario" onfocus="this.select()">
+                            </td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                Password: (*)
+                            </td>
+                            <td>
+                                <input type="password" name="password" class="default" name="password"
+                                       onfocus="this.select()">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                Gemero: (*)
+                            </td>
+                            <td>
+                                java <input type="checkox" name="tecnologia" value="java">
+                                &nbsp;&nbsp;&nbsp;
+                                .Net <input type="checkox" name="tecnologia" value="net">
+                                &nbsp;&nbsp;&nbsp;
+                                .Php <input type="checkox" name="tecnologia" value="php">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                T3cnologias (*)
+                            </td>
+                            <td>
+                                Hombre <input type="radio" name="genero" value="H">
+                                &nbsp;&nbsp;&nbsp;
+                                Mujer <input type="radio" name="genero" value="M">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                Ocupacion (*)
+                            </td>
+                            <td>
+                                <select name="ocupacion" class="default">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1">Profesor</option>
+                                    <option value="2">Ingeniero</option>
+                                    <option value="3">Jubilado</option>
+                                    <option value="4">Otro</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                Musica Favorita:
+                            </td>
+                            <td>
+                                <select name="musica" multiple class="default">
+
+                                    <option value="rock">Rock</option>
+                                    <option value="pop">Pop</option>
+                                    <option value="salsa">Salsa</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="columna">
+                                Comentarios
+                            </td>
+                            <td>
+                                <textarea class="defualt" onfocus="this.select()" name="comentaris" rows="2" cols="30">
+                                    Escribir un texto
+                                </textarea>
+                            </td>
+                        </tr>
+
+                        <tr style="text-align: center">
+                            <td>
+                                <input type="reset" value="Limpiar" class="default"></input>
+                            </td>
+                            <td>
+                                <input type="submit" value="Enviar" class="default"></input>
+                            </td>
+
+                        </tr>
+                        </table>
+
+                        </form>
+
+
+                        </body>
+                        </html>
